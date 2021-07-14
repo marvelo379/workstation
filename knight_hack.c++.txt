@@ -1,0 +1,94 @@
+
+
+
+
+
+
+
+
+
+#include <bits/stdc++.h>
+
+#ifndef LOCAL
+#define cerr dolor_sit_amet
+#endif
+
+#define mp make_pair
+#define sz(x) ((int)((x).size()))
+#define X first
+#define Y second
+#define ALL(x) (x).begin(), (x).end()
+using namespace std;
+typedef long long ll;
+typedef unsigned long long ull;
+typedef long double ld;
+typedef pair < int , int > ipair;
+typedef pair < ll , ll > lpair;
+const int IINF = 0x3f3f3f3f;
+const ll LINF = 0x3f3f3f3f3f3f3f3fll;
+const double DINF = numeric_limits<double>::infinity();
+const int MOD = 1000000007;
+const double EPS = 1e-9;
+const double PI = acos(-1.0);
+ll gcd(ll a, ll b) { return b ? gcd(b, a % b) : a; }
+ll sqr(ll x) { return x*x; } ll sqr(int x) { return (ll)x*x; }
+double sqr(double x) { return x*x; } ld sqr(ld x) { return x*x; }
+mt19937 mmtw(960172);
+ll rnd(ll x, ll y) { static uniform_int_distribution<ll> d; return d(mmtw) % (y - x + 1) + x; }
+
+// ========================================================================= //
+
+const int DX[] = {2, 2, 0, -2, -2, 0};
+const int DY[] = {-1, 1, 2, 1, -1, -2};
+const string DS[] = {"LL", "LR", "R", "UR", "UL", "L"};
+const int order[] = {4, 3, 2, 1, 0, 5};
+
+const int N = 222;
+
+int d[N][N], dp[N][N];
+
+int main() {
+    ios::sync_with_stdio(false);
+
+    int n;
+    int x1, y1, x2, y2;
+
+    cin >> n >> x1 >> y1 >> x2 >> y2;
+    memset(d, 0x3f, sizeof(d));
+    d[x1][y1] = 0;
+    vector<ipair> q = {{x1, y1}};
+    for (int i = 0; i < sz(q); ++i) {
+        int x = q[i].X, y = q[i].Y;
+        for (int j : order) {
+            int nx = x + DX[j];
+            int ny = y + DY[j];
+            if (nx >= 0 && ny >= 0 && nx < n && ny < n && d[nx][ny] == IINF) {
+                d[nx][ny] = d[x][y] + 1;
+                dp[nx][ny] = j;
+                q.push_back({nx, ny});
+            }
+        }
+    }
+
+    if (d[x2][y2] == IINF)
+        cout << "Impossible\n";
+    else {
+        vector<string> ss;
+        while (x2 != x1 || y2 != y1) {
+            int j = dp[x2][y2];
+            ss.push_back(DS[j]);
+            x2 -= DX[j];
+            y2 -= DY[j];
+        }
+        reverse(ALL(ss));
+        cout << sz(ss) << "\n";
+        for (auto x : ss)
+            cout << x << " ";
+        cout << "\n";
+    }
+
+    return 0;
+}
+                    
+
+
