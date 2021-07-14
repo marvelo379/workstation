@@ -1,0 +1,31 @@
+Program to convert a number in to words
+
+import java.util.*;
+class numtoword
+{
+void main(String arg[])
+{
+String a[]={"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Ninteen"};
+String b[]={"", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninty"};
+Scanner ob=new Scanner(System.in);
+int n,m,p,q,r;
+System.out.println("Enter a number less than 1000");
+n=ob.nextInt();
+if(n<1000)
+{
+m=n/100;
+p=n%100;
+if(m>0) 
+System.out.print(a[m] + " Hundred ");
+else 
+System.out.print("");
+if(p<20) System.out.println(a[p]);
+else
+{
+q=p%10;
+r=p/10;
+System.out.println(b[r] + " " + a[q]);
+}
+}
+}
+}

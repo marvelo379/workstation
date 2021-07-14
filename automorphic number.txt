@@ -1,0 +1,55 @@
+CODES OF THE AUTOMORPHIC NUMBER PROGRAM
+
+import java.util.*;
+class Automorphic
+{
+int i,n,no,sqnum,rev=0,digit=0;
+Scanner sc=new Scanner(System.in);
+void getNumber()
+{
+System.out.println("Enter the number:");
+n=sc.nextInt();
+no=n;
+do
+{
+digit++;
+no=no/10;
+} while(no!=0);
+
+sqnum=n*n;
+}
+void showResult()
+{
+do
+{
+rev=rev*10+sqnum%10;
+sqnum=sqnum/10;
+digit--;
+if(digit==0)
+break;
+} while(true);
+
+rev=reverse(rev);
+if(n==rev)
+System.out.println(n+" is an Automorphic number");
+else
+System.out.println(n+" is not an Automorphic number");
+}
+int reverse(int n)
+{
+int r=0;
+while(n!=0)
+{
+r=r*10+n%10;
+n=n/10;
+}
+return r;
+}
+void main()
+{
+Automorphic obj=new Automorphic();
+obj.getNumber();
+obj.showResult();
+}
+}
+

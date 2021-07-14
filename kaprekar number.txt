@@ -1,0 +1,64 @@
+Given the two positive integers p and q, where p < q. Write a program to determine how many kaprekar numbers are there in the range between 'p' and 'q'(both inclusive )and output them.About 'kaprekar' number:
+A positive whole number 'n' that has 'd' number of digits is squared and split into
+2 pieces, a right hand piece that has 'd' digits and a left hand piece that has
+remaining 'd' or 'd-1' digits. If sum of the pieces is equal to the number then
+it's a kaprekar number.
+
+import java.util.*;
+class Bank
+{
+int i,p,q,c=0;
+int num;
+Scanner sc=new Scanner(System.in);
+void take()
+{
+System.out.println("Enter the Lower Range:");
+p=sc.nextInt();
+System.out.println("Enter the Upper Range:");
+q=sc.nextInt();
+if(p >=q)
+{
+System.out.println("Wrong Entry...");
+return;
+}
+System.out.println("THE KAPREKAR NUMBERS ARE:");
+for(i=p;i< =q;i++)
+{
+show(i);
+}
+System.out.println("FREQUENCY OF KAPREKAR NUMBERS IS:"+c);
+}
+public void show(int x)
+{
+int digit,rev=0;int no;num=x*x;digit=0;no=x;
+while(no > 0)
+{
+digit++;
+no=no/10;
+}
+no=num;
+while(digit > 0)
+{
+rev=rev*10+no%10;
+no=no/10;
+digit--;
+}
+rev=reverse(rev);
+if((rev+no)==x)
+{
+System.out.print("  "+x);
+c++;
+}
+}
+int reverse(int n)
+{
+int r=0;
+while(n > 0)
+{
+r=r*10+n%10;
+n=n/10;
+}
+return r;
+}
+}
+

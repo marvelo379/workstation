@@ -1,0 +1,27 @@
+The paragraph is entered in a string object firstly. StringTokenizer class is used in this program to break the text into tokens in respect of punctuations as it is given in the program that paragraph is to be broken into sentences in respect of punctuation and stored in a string array object ‘str1’. This step ensures that all sentences are stored in the string array. Next step is to break the sentences again in words and stored in another string array ‘str2’. These words are then sorted in ascending order and displayed. Another very interesting job is performed here, all the words of ‘str2’ are stored in the third string array ‘vowel’ from which words starting with vowels will be searched. This step is required as values of the string array ‘str2’ will be changed every time a new sentence from the string array ‘str1’ is broken into words.
+
+
+
+Java program to print the words of a sentence in reverse
+import java.io.*;
+class abc
+{
+void main()
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a sentence");
+String S=sc.nextLine();
+S=S.trim();
+S=" "+S+" ";
+int L=S.length(),a=L;
+for(int i=L-1;i>=0; i--)
+{
+if(S.charAt(i)==32)
+{
+System.out.print(S.substring(i+1,b)+" ");
+b=i;
+}
+}
+}
+}
+

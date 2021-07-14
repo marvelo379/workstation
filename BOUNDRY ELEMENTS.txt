@@ -1,0 +1,145 @@
+19. Write a program to sort the boundary elements of an array then
+print the rearranged matrix and then print only the boundary
+elements.
+Code:
+import java.util.*;
+class ArrArrange
+{
+ void main()
+{
+Scanner sc=new Scanner(System.in);
+int a[]=new int[50];
+System.out.println("Enter array size : ");
+int n=sc.nextInt();
+int dim=n;
+int[][] spiralArray = new int[n][n];
+for(int i=0;i<n;i++)
+{
+for(int j=0;j<n;j++)
+{
+System.out.println("Enter element : ");
+spiralArray[i][j]=sc.nextInt();
+}
+}
+System.out.println("_______________");
+System.out.println("ORIGINAL MATRIX");
+System.out.println("_______________");
+for(int i=0;i<n;i++)
+{
+for(int j=0;j<n;j++)
+{
+System.out.print(+spiralArray[i][j]+" ");
+}
+System.out.println(" ");
+}
+int num =(int)Math.ceil((dim)/2.0);
+int j;
+int sideLen = dim;
+int currNum = 1;
+int t=0,s=0;
+for(int i=0;i<1;i++)
+{
+for(j=0;j<sideLen;j++)
+{
+a[t]=spiralArray[i][i+j];
+t++;
+}
+for (j=1;j<sideLen;j++)
+{
+a[t]=spiralArray[i+j][dim-1-i];
+t++;
+}
+for(j=sideLen-2;j>-1;j--)
+{
+a[t]=spiralArray[dim-1-i][i+j];
+t++;
+}
+for(j=sideLen-2;j>0;j--)
+{
+a[t]=spiralArray[i+j][i];
+t++;
+}
+sideLen-= 2;
+}
+for (int i=0;i<t;i++)
+{
+for (j=0;j<t;j++)
+{
+if(a[i]<a[j])
+{
+int temp=a[i];
+a[i]=a[j];
+a[j]=temp;
+}
+}
+}
+for (int i=0;i<t;i++)
+{
+s=s+a[i];
+}
+t=0;
+sideLen=dim;
+for (int i = 0; i < 1; i++)
+{
+for (j = 0; j < sideLen; j++)
+{
+spiralArray[i][i + j]=a[t];
+System.out.print(" 1st sec"+a[t] + " ");
+t++;
+}
+for (j = 1; j < sideLen; j++)
+{
+spiralArray[i + j][dim - 1 - i]=a[t];
+System.out.print(" 2nd sec"+a[t] + " ");
+t++;
+}
+for (j = sideLen - 2; j > -1; j--)
+{
+spiralArray[dim - 1 - i][i + j]=a[t];
+System.out.print(" 3rd sec"+a[t] + " ");
+t++;
+}
+for (j=sideLen-2;j>0;j--)
+{
+spiralArray[i + j][i]=a[t];
+System.out.print(" 4th sec"+a[t] + " ");
+t++;
+}
+sideLen -= 2;
+}
+System.out.println("_________________");
+System.out.println("REARRANGED MATRIX");
+System.out.println("_________________");
+for (int i=0;i<n;i++)
+{
+for (j=0;j<n;j++)
+{
+System.out.print(" "+spiralArray[i][j] + " ");
+}
+System.out.println(" ");
+}
+System.out.println("_________________");
+System.out.println("BOUNDARY ELEMENTS");
+System.out.println("_________________");
+for(int i=0;i<n;i++)
+System.out.print(+spiralArray[0][i]+" ");
+System.out.print("\n");
+for(int i=1;i<n-1;i++)
+{
+for(j=0;j<n;j++)
+{
+if(j==0 || j==n-1)
+System.out.print(+spiralArray[i][j]+" ");
+else
+System.out.print(" ");
+}
+System.out.print("\n");
+}
+for(int i=0;i<n;i++)
+System.out.print(+spiralArray[n-1][i]+" ");
+System.out.println(" ");
+System.out.println("_________________________________________");
+System.out.println("SUM OF OUTER ROW AND COLOUM ELEMENTS : "+s);
+System.out.println("_________________________________________");
+}
+}

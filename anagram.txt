@@ -1,0 +1,58 @@
+java program To find whether two strings are anagrams
+import java.util.*;
+class anagrams
+{
+void main()
+{
+String s1,s2;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the strings:");
+System.out.print("String 1: ");
+s1=sc.nextLine();
+System.out.print("String 2: ");
+s2=sc.nextLine();
+s1=removewhitespace(s1);
+s2=removewhitespace(s2);
+s1=s1.toLowerCase();
+s2=s2.toLowerCase();
+if(s1.length()!=s2.length())
+System.out.print("Not anagrams(no. of letters not same)!");
+else
+{
+for(int i=0;i<s1.length();i++)
+ {
+for(int j=0;j<s2.length();j++)
+ {
+if(s1.charAt(i)==s2.charAt(j))
+{
+s2=delete(s2,j);
+break;
+}
+}
+}
+if(s2.equals("")) 
+System.out.print("The strings are anagrams!");
+else 
+System.out.print("Not anagrams "+s2);
+}
+}
+String removewhitespace(String s)
+{
+for(int i=0;i<s.length();i++)
+ {
+if(s.charAt(i)==' ')
+s=delete(s,i);
+}
+return s;
+}
+String delete(String s,int ind)
+{
+String str=s.substring(ind+1,s.length());
+s=s.substring(0,ind);
+s=s+str;
+return s;
+}
+
+
+
+

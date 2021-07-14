@@ -1,0 +1,24 @@
+Decimal to Roman number conversion
+import java.util.*;
+class dectoroman
+{
+    public static void main(String arg[])
+    {
+        Scanner sc= new Scanner(System.in);
+        String R[ ]={"C", "XC", "L", "XL", "X", "IX","V", "IV","I"};
+        int x[ ]={100,90, 50, 40, 10, 9, 5, 4, 1};
+        int d, i;
+        String t="";
+        System.out.println("Enter an integer number ");
+        d=sc.nextInt();
+        for(i=0;i<R.length;i++)
+        {    
+            while(d<=x[i])
+            {
+                d=d-x[i];
+                t=t+R[i];
+            }
+        }
+        System.out.println("Roman number is ="+ t);
+    }
+}

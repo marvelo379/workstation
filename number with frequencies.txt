@@ -1,0 +1,57 @@
+13. Write a program to input and store n integers in a single
+subscripted variable and print each number with their frequencies
+of existence.
+Code:
+import java.util.*;
+class NumFrequency
+{
+void main()
+{
+int i=0,j=0,t=0,p=0;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter array limit : ");
+int x=sc.nextInt();
+int ar[]=new int[x];
+for(i=0;i<x;i++)
+{
+System.out.println("Input no:");
+ar[i]=sc.nextInt();
+}
+for(i=0;i<x;i++)
+{
+for(j=i+1;j<x;j++)
+{
+if(ar[i]>ar[j])
+{
+p=ar[i];
+ar[i]=ar[j];
+ar[j]=p;
+}
+}
+}
+for(i=0;i<x;i++)
+{
+p=ar[i];
+for(j=0;j<x;j++)
+{
+if(p==ar[j])
+{
+t=t+1;
+ar[j]=0;
+}
+}
+if(p==0)
+{
+t=0;
+continue;
+}
+else
+{
+System.out.print(p+" X "+t);
+t=0;
+}
+System.out.println(""); 
+} 
+} 
+}
+}

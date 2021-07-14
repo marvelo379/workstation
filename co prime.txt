@@ -1,0 +1,48 @@
+Java programs to find the coprimes of a number
+
+import java.util.*;
+class Coprimes
+{
+void main()
+{
+int sum=0;
+int p=0;
+int y;
+for(int i=18;i<=23;i++)
+{
+sum=0;
+p=0;
+int[]a=new int[i/2];
+for(int j=2; j<=i/2; j++)
+{
+if(i%j==0 && IsPrime(j)==true)
+a[p++]=j;
+}
+System.out.println("For "+i+", the co-primes are:");
+for(int x=1; x
+ {
+for(y=0; y
+ {
+if(x%a[y]==0)
+break;
+}
+if(y==p)
+{
+sum+=x;
+System.out.println(x);
+}
+}
+System.out.println("Their sum is "+sum);
+System.out.println("");
+System.out.println("");
+}
+}
+boolean IsPrime(int a)
+{
+a=Math.abs(a);
+for(int i=2; i<=a/2; i++)
+if(a%i==0)
+return false;
+return true;
+}
+}

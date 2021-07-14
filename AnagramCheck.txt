@@ -1,0 +1,39 @@
+import java.util.*;
+public class AnagramCheck
+{    
+  void main()
+    {   
+     Scanner sc=new Scanner(System.in);
+        System.out.println("Enter word 1");
+        String word1=sc.nextLine();
+        System.out.println("Enter word 2");
+        String word2=sc.nextLine();
+        int flag=0;
+        for(char ch='A'; ch<='Z'; ch++)
+        {   
+         int c1=0;
+            for(int i=0; i<word1.length(); i++)
+            {   
+             char c=word1.charAt(i);          
+             c=Character.toUpperCase(c);
+             if(c==ch) 
+             c1++;
+            }
+            int c2=0;
+            for(int i=0; i<word2.length(); i++)
+            {   
+             char c=word2.charAt(i);          
+             c=Character.toUpperCase(c);
+             if(c==ch) 
+             c2++;
+            }
+            if(c1 != c2) flag=1;
+        }
+        if(flag==0)
+        {   System.out.println("Anagram");
+        }
+        else
+        {   System.out.println("Not an Anagram");
+        }        
+    }
+}

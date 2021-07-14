@@ -1,0 +1,98 @@
+Write a program which takes a string (maximum 80 characters terminated by a full stop. The words in this string are assumed to be separated by one or more blanks.
+Arrange the words of the input string in descending order of their lenghts. Same length words should be sorted alphabetically. Each word must start with an uppercase letter and the sentence should be terminated by a full stop.
+
+Codes of the program
+
+import java.util.*;
+ class Program1
+ {
+  String str,str2;
+  StringTokenizer stk;
+  String sr[];
+  int i,j,x;
+  int flag;
+  Scanner sc=new Scanner(System.in);
+  void takeString()
+  {
+  char ch;
+   while(true)
+   {
+   System.out.println("Enter the sentence:");
+   str=sc.nextLine;
+   if(str.length()>80)
+   {
+    System.out.println("String exceeds 80 characters.");
+    continue;
+    }
+    if(str.charAt(str.length()-1)!='.')
+   {
+  System.out.println("String must terminate with full stop.");
+    continue;
+    }
+   else
+   break;
+   }
+   str=str.substring(0,str.length()-1);
+   str2="";
+   x=str.length();
+   flag=0;
+   for(i=0;i< x;i++)
+   {
+   ch=str.charAt(i);
+   if(i==0)
+   str2=str2+(char)(ch-32);
+   else if(ch==' ')
+   {
+   flag=1;
+   str2=str2+ch;
+   }
+   else if(flag==1)
+     {
+      flag=0;
+      str2=str2+(char)(ch-32);
+     }
+     else
+     str2=str2+ch;
+     }
+     str=str2;
+   stk=new StringTokenizer(str);
+   x=stk.countTokens();
+   sr=new String[x];
+   x=0;
+   while(stk.hasMoreTokens())
+   {
+    str2=stk.nextToken().trim();
+    sr[x++]=str2;
+   }
+   display();
+  }
+  private void display()
+  {
+   for(i=0;i< x-1;i++)
+   {
+    for(j=i+1;j< x;j++)
+    {
+    if(sr[i].length()< sr[j].length())
+    {
+     str2=sr[i];
+     sr[i]=sr[j];
+     sr[j]=str2;
+     }
+     }
+     }
+     for(i=0;i< x;i++)
+     {
+     if(i!=x-1)
+      System.out.print(sr[i]+" ");
+      else
+      System.out.print(sr[i]);
+      }
+      System.out.print(".");
+     }
+     void main()
+     {
+      Program1 ob=new Program1();
+      ob.takeString();
+      }
+      }
+

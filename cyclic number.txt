@@ -1,0 +1,53 @@
+A number with n digits, which, when multiplied by 1, 2, 3, ..., n produces the same digits in a different order is known as a Cyclic Number. For example, 142857 is a cyclic number: 142857 x 2 = 285714; 142857 x 3 = 428571; 142857 x 4 = 571428; 142857 x 5 = 714285; 142857 x 6 = 857142, and so on. Write a program to enter a number and check if it is a cyclic number or not.
+
+import java.util.*;
+class CyclicNo
+{
+String sort(String s)
+ {
+   String t="";
+   int i,j;
+   char a[]=s.toCharArray();
+  for(i=0;i< a.length;i++)
+  {
+     for(j=0;j< a.length-i-1;j++)
+     {
+         if(a[j]>a[j+1])
+         {
+          char r=a[j];
+          a[j]=a[j+1];
+          a[j+1]=r;
+        }
+    }
+}
+    for(i=0;i<a.length;i++)
+     t=t+a[i];
+   return t;
+ }
+void main()
+{
+Scanner sc=new Scanner(System.in);
+    String w,r,p;
+    int i,n;
+    boolean flag = true;
+    System.out.println("Enter a number");
+        n=sc.nextInt();
+  String str=Integer.toString(n);
+  w=sort(str);
+for(i=2;i<=str.length();i++)
+ {
+  r=Integer.toString(n*i);
+  p=sort(r);
+  if(p.equals(w)==false)
+  {
+    flag=false;
+    break;
+         }
+ }
+   if(flag)
+   System.out.println(n+" is a cyclic number");
+   else
+   System.out.println(n+" is not a cyclic number");
+    } 
+ } 
+  
