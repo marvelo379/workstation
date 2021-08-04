@@ -1,0 +1,97 @@
+****************************ARRAY IN JAVA************************************************************************************************************
+#java array is object that cotain similar elements
+# if value is not given for any index it give 0 at that place*********
+int[] arr=new int[5];
+arr[0]=14;
+arr[1]=12;
+....
+for(int i=0;i<arr.length;i++)
+{
+sopln(arr[i]);
+}
+int n2[]={10,20,50,48,79,99}
+for(int i:n2){
+   sopln(i)
+}
+
+String[] s1={"man","is","selfish","creature"};
+sopln(s1);-----------------------------ERROR
+for(String i: s1){
+      sopln(i)
+}
+
+int arr[][]={{1,2,3},{12,78,99}}
+for(int i=0;i<2;i++){
+     for(int j=0;j<2;j++){
+              sop(arr[i][j])
+     }
+     sopln();
+}
+O/P:123
+    12 78 99
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@COPY ONE ARRAY TO OTHER **************************
+
+char[] new={'d','e','k','j','o','jk'};
+char[] copy1=new char[10];
+System.arraycopy(new,srcpos:0,copy1,destpos:0,length:10 )
+sopln(String.valueof(copy1);
+
+
+
+# CLONNING AN ARRAAY
+  int arr[]={10,100,41,51,89}
+  int new[]=arr.clone();
+  for(int i:new){
+       sopln(i)
+  }
+
+
+///////////////////////////////////////////////////////////////////////
+ArrayList class:uses a dynmamic array for storing the elements .its unlimited sized array ,no size limit .we can add remove element anytime
+
+ArrayList<String> name=new ArrayList<String>();
+name.add("alisa")
+name.add("roger")
+name.add("steve")
+name.add("helucus")
+
+sopln(name)----------------------------noaddress is printed
+########..............................
+Iterator itr=name.iterator();
+while(itr.hasNext(){
+     sopln(itr.next());
+}
+##########................
+for(String i:name){
+     sopln(i)
+}
+
+
+
+String name2=name.get(1);
+name.remove(index:1);
+name
+sopln(name.size())
+name.set(0,"pranay");
+name
+Collections.sort(name)
+for(string i:name){
+     sopln(i)
+}
+ArrayList<String> new22=new ArrayList<>();
+new22.add("ran")
+new22.add("dell")
+name.addAll(new22);
+name
+
+
+@@@@@@@@@@@@@@@@@mixed TYPE ARRAYLIST&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+ArrayList n=new ArrayList();
+n.addAll(name);
+n.add(12)
+n.add(12)
+n.add(18)
+
+

@@ -1,0 +1,108 @@
+$$$$$$$$$$$$$$$$$$$$$$$$JAVA LINKLIST $$$$$$$$$$$$$$$$$$$$$$$$$$4
+
+LinkedList<String> s1=new LinkedList<String>();
+s1.add("the")
+
+s1.add("man");
+s1.add("is");
+s1.add("the");
+S1.add("creature");
+sopln(s1);
+#  WE CAN INSERT FROM BOTH THE END
+S1.add(index:0,ele:"same")
+LinkedList<String> new2= new LinkedList<String>();
+new2.add("pranay");
+new2.add("starirs");
+new2.add("feriece");
+s1.addAll(new2);-----------------------------EXTENDED LINKLIST
+S1.addfirst("JAI");
+s1.addlast("java");
+s1.remove(ind:0);
+s1.remove("pranay");
+new2.removeAll()
+s1--------------------------all content of new2 is cleared
+
+String n=s1.get(1);------------------------store content of ll to string
+LinkedList n4= new LinkList();
+n4.add("fellow")
+n4.add(10.25)
+......
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                       JAVA LIST INTERFACE          !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+List<String> name=new ArrayList<>();
+name.add("man");
+name.add("is");
+name.add(5,"worshiper");
+
+sopln(name);
+name.add/addAll/remove/removeall/clear/contains(ele)/get(index)/indexof(char)
+
+
+List name=new ArrayList<>();----------------mixed type
+
+
+String[] nam1={"man","loves","money"}
+List<String> name22=new ArrayList();
+for(String i:name22){
+      name22.add(i)
+}
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!         HASHSETSS       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# IMPLEMENTS HASHING
+#HASHSETS CONTAINS UNIQUE ELEMENTS ONLY
+# ALLOWS NULL VALUES
+#HASH SET CLASS ARE NOT SYNCHRONISED
+# NO INSERTION ORDER IS MAINTAINED FOR ELEMENT ,IT IS AS PER HASHCODE
+#BEST APPROCH TO SEARCH THE ELE
+
+
+LETS START!!!!!!...............
+
+
+
+HashSet<String> h1=new HashSet<String>();
+h1.add("man");
+h1.add("is");
+h1.add("kind");
+h1.remove("man");
+h1.add(null);
+HashSet<String> h2=new HashSet<String>();
+h2.add("samsung");
+h2.add("nokia");
+h2.add("redmi");
+h2.add("iphone");
+h1.addAll(h2);---------------------order is not maintained
+h2.removeAll();
+h1------------------------all data of h2 is removed now
+h1.isEmpty();
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!! LINKED HASHSET    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+*JAVA LINKEDHASHSET IS A CLASS
+*CONTAIN UNIQUE ELEMENT 
+*PROVIDE ALL
+OPERATION AND NULL VALUE
+*NON SYNCHRONISED
+*MAINTAIN INSERTION ORDER
+*LINKEDHASHSET CLASS EXTENDS HASHSET CLASS WHICH IMPLEMENTS SET INTERFACE
+
+
+
+
+
+
+ 
+
+
+
