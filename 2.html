@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> second tute</title>
+    </head>
+    <body>
+        <!-- div shows content in different lines-->
+        <!-- use full row for style-->
+        <div style="border:1px solid red;"> random text</div>
+        <div> its my text</div>
+        <span style="border:1px solid red">my site is cool</span>
+        <!--  span  continues the text in same line-->
+        <!-- span use limited block -->
+        <span> no random content is here</span>
+        <br> <br> <br>
+        <!--- iframe tag- to do comparission of two sites on a page"like covid cases shown by aaj tak n ndtv-->
+        <iframe src="https://www.ndtv.com/" height="500" width="500"></iframe>
+        <iframe src="https://twitter.com/"></iframe>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+
+        </audio>
+       <!-- <video controls>-->
+        <video  controls autoplay  width="100"  height="100">
+            <source="video.mp4" type="video/mp4">
+            your browser not suppport video 
+
+
+        </video>
+        <!-- pdf to html page-->
+        <!-- we can add pdf 1. embed 2.iframe 3.object-->
+        <embed src="MARVEL_RESU.pdf" type="application/pdf" width="1000" height="500">
+        <iframe src="MARVEL_RESU.pdf"   width="500" height="500" ></iframe>
+        <object data="MARVEL_RESU.pdf"    width="500" height="1000" type="application/pdf"></object>
+        <!-- embbed a youtube video on web page--> 
+        <!-- 1. youtube /video open/share-embede -start-copy   /vs code pe paste-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bBpKJccIdvQ?start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bBpKJccIdvQ" title="YouTube video player"
+         frameborder="25" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- google maps/search/share/embed/customsize/copy html-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.400553852825!2d78.03994815107124!3d27.175144782931934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39747121d702ff6d%3A0xdd2ae4803f767dde!2sTaj%20Mahal!5e0!3m2!1sen!2sin!4v1628049102038!5m2!1sen!2sin"
+         width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <!-- HTML entities--> 
+        <!-- reserved word cannot be displayed/ 1.by NAME-->
+        &lt;div&gt;
+        <div></div>
+        <!-- by number-->
+        &#60;div&#62;
+        <br> <br>
+        <!-- HTML SYMBOLS.......BY HTML ENTITIES.....-->
+        &COPY;
+        &#8508;
+        <!-- emojis in HTML- BY HTML NO OR NAME-->
+            &#128555 ;
+        <!-- semantic element:ELEMENT WITH MEANING /DESCRIBE MEAN TO  DEVELOPRER & BROWSER PERSON--> 
+        <!-- like  <form>,<table> <mark> <nav> <article> <detail> <footer> <header>  <figcaption> <aside> <summary> <time> <sidebar>-->
+        <!-- example of non sematic <div> and <span> tell nothing about content--> 
+        <!-- how to give image link on page--> 
+        <!-- click the pragya photo and amazon get open.....--> 
+
+        <!--<a href="https://www.amazon.com" target=" welcome to AMAZON">
+            <img src=" " alt=" " ></a>
+         -->
+         <!-- area k hisab se click kare to alga link open ho-->
+         <a>
+            <img src="pragya.jpg" alt="work track" usemap="#workplace">
+            <!-- map me kiss area pe click kare ge to kon sa amazon page khule ga /pragya face side pe--laptop link/down area--headphone link-->
+            <map name="workplace">
+                <area shape=" space="rect" coords="34,44,270,350" 
+                href="https://www.amazon.com/s?k=laptop+stand&crid=1XQS0QC4Y4MIW&sprefix=la%2Caps%2C813&ref=nb_sb_ss_ts-doa-p_3_2" alt="">
+                <area shape="rect" coords="290,172,333,250"
+                 href="https://www.amazon.com/s?k=headphones&crid=2RM6YQWY4J9FG&sprefix=head%2Caps%2C717&ref=nb_sb_ss_ts-doa-p_1_4">
+            </map>
+        </a>
+        <!-- using imagemap.org /to define click response for each section-->
+                <img src="pragya.jpg" usemap="#image_map">
+                <map name="image_map">
+                    <area alt="" title="" href="https://www.google.com" coords="436,352,193" shape="circle">
+                    <area alt="" title="" href="https://www.amazon.com" coords="643,444,759,571" shape="rect">
+                </map>
+        <!-- HTML FORMS.............-->
+        <!-- in form tag has two attribute method /action: on click to submit which page to open next-->
+        <!-- by default its GET method and ACTION:SUMIT TO SAME PAGE-->
+        <form method="GET/POST" action="2.java">
+            <div>
+                NAME:<input TYPE="text">
+            </div>
+            <DIV>
+                <br>
+                <input type="submit"  value="submit form">
+            </DIV>
+           <!-- <input type="text">-->
+        </form>
+        <!-- input types in FORM TAG-->
+        <form>
+            <div>
+                TEXT:
+                <input TYPE="text">
+            </div>
+            <DIV>
+                SUBMIT:
+                <INPUT TYPE="submit"><BR>
+
+            </DIV>
+            <DIV>
+                COLOUR:
+                <input type="color"><br>
+            </DIV>
+            <div>
+                DATE:
+                <input type="date"><br>
+
+            </div>
+            <div>
+                EMAIL:
+                <input type="email"><br>
+            </div>
+            <div>
+                HIDDEN/LOC:
+                <input type="hidden" value=""><br>
+
+            </div>
+            <div>
+                NUMBER:
+                <input TYPE="number"><BR>
+            </div>
+            <DIV>
+                PASSWORD:
+                <input type="password"><BR>
+            </DIV>
+            <DIV>
+                RESET:
+                <INPUT TYPE="reset"><BR>
+
+            </DIV>
+            <div>
+                TIME:
+                <INPUT TYPE="time"><BR>
+            </div>
+            <DIV>
+                RANGE:
+                <INPUT TYPE="range" MIN="1000" max="5000"><BR>
+            </DIV>
+        </form>
+        <!-- file u[load in html]   "attach a file on page"-->
+        <form enctype="multipart/form-data">
+            <div>
+                select a doc:
+                <input type="file" multiple>
+            </div>
+        </form> 
+        <!-- ATTRIBUTES OF FORM TAGG..................-->  
+        <!-- VALUE ATTR: IS USED WHEN ALL READY DETAILS ARE ENTERED  AND U R WONDERING TO EDIT THE PAGE DETAIL--> 
+        <!-- READONLY: NON CHAINGEBLE/      DISABLE   /-->
+        <!-- SIZE: BOX /BLOCK SIZE-BLOCK:"MAX VISIBLE CHAR UPON BLOCK"-->
+        <!-- MAXLENGTH:"MAX SIZE DATA TO BE ENTERED"-->
+        <!-- PLACE HOLDER :A HINTTTER TEXT THAT DISAPPERS WHEN USER START TYPING THE TEXT-->
+        <!-- REQUIRED:FOR COMPULSORY FIELD-->
+        <!-- AUTOFOCUS: CURSOR DEFAULT AVAILABLE-->
+        <!-- AUTO COMPLETE : HINT TO LINK TO NEXT PAGE-->
+        <!-- NAME-->
+        <!-- TEXT AREA :"USER ITERATION /GIVE SOME COMENT/REVIEWS/RATING BOX"-->
+        <FORM>
+            <DIV>
+                name:
+                <INPUT TYPE="text" value="" size="50"  NAME="FIRST_NAME" maxlength="20" placeholder="ENTRE FIRST NAME" required autofocus>
+                <BR>
+                COUNTRY:    
+                <input type="TEXT" VALUE="india " readonly > 
+                <BR>
+                <INPUT TYPE="NUMBER" step="2" MIN="10" MAX="20" >
+                <BR>   
+                <textarea ROWS="20" COLS="20" placeholder="DESCRIPTION ">HELLO...</textarea>
+                <INPUT TYPE="image" SRC="https://www.behalacollege.in/pg/images/btn.png" width="100" height="50" >     
+                <INPUT TYPE="submit">        
+
+            </DIV>
+        </FORM>
+        <!-- to create a top down menu -->
+        <form>
+            <select size="2" multiple >
+                <optgroup label="cars">
+
+                <option value="first">audi</option>
+                <option value="sec"> bmw</option>
+                <option value="third">TATA  <selected id=""></option>
+                </optgroup>  
+                <optgroup label="sports">
+                    <option value="1">cricket</option>
+                    <option value="2">basketball</option>
+                    <option value="3">football</option>
+                    <option value="4">volly ball</option>
+                </optgroup>  
+            </select>
+        </form>
+<!-- making radio/  if name feild is same for all input then only one among all options will be get selected-->
+        <form>
+            <input type="radio" value="m" name="gender">MALE
+            <input type="radio" name="gender">FEMALE
+            <input type="radio" name="gender">OTHERS
+            <br>
+            <input type="radio" name="emp_type">DEVELOPRER
+            <INPUT type="radio" name="emp_type">front-end
+            <input type="radio" name="emp_type">ADMIN    
+        </form>
+<!-- CHECK BOX-->  
+<!-- yaha  pe name same hoga tab bhi multiple select kar sakte h-->      
+        <form>
+            <input type="checkbox">delhi
+            <input type="checkbox">lucknow
+            <input type="checkbox">bengluru
+            <input type="checkbox">kerela
+        </form>
+<!-- DATALIST IN HTML................--> 
+<!-- like google search box,jab ham koi letter type karte h to usase related cheze  aati h/predefined option for input entered--> 
+        <form>
+            <!-- list pe jo likha h aur datalist k id ka value same hona chahia for mapping them together-->
+            SEARCH<input type="text" list="search" >
+            <datalist id="search">
+                <option value="Apple">
+                <option value="Mango">
+                <option value="cherry">
+                <option value="guava" > 
+            
+            </datalist>
+
+            <input type="submit" value="search">
+        </form>
+<!--WE CAN USE FIELDSET INSTEAD OF DIV TO GRP THE INFORMATION /<DIV> TO <FIELDSET> --> 
+    <!--- 1.LABEL TAG,FIELD SET TAG,LEGEND TAG-->
+
+        <form>
+            <fieldset>
+                <legend>STUDENT NAME INFO:</legend>
+                <!-- LABEL PE FOR PE JO LIKHE GE WAHI INPUT PE JO ID PE DALA H MATCH KARNA CHAHIA /USASE LABEL PE CLICK KARE GE TO BHI CURSOR SET HO JAYE GA-->
+                <label FOR="FNAME">FIRST NAME:</label>
+                <input type="text" name="firstname" ID="FNAME"><br>
+                <label for="lname">LAST NAME:</label>
+                <INPUT TYPE="text" name="lastname" id="lname"><br>
+
+            </fieldset>
+            <DIV>
+                <legend> OTHER INFO:</legend>
+                <label for="addr">ENTRE YOUR ADDRESS:</label>
+                <input type="text" name="address" id="addr"><br>
+                <label for="uid">ENTRE YOUR ROLL NO:</label> 
+                <input type="text" name="id" id="uid"><br>
+            </DIV>
+            <fieldset>
+            <input type="submit"><br>
+            <legend width="20" height="20">your form will be submitted soon!  </legend>
+            </fieldset>
+        </form> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
